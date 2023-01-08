@@ -1,7 +1,5 @@
-import { Checkbox, checkboxClasses, FormControlLabel } from '@mui/material'
-import { sentenceCase } from 'change-case'
-import React from 'react'
-import { styled } from '@mui/system';
+import { Checkbox, FormControlLabel } from '@mui/material';
+import { sentenceCase } from 'change-case';
 
 type Props = {
     label: string
