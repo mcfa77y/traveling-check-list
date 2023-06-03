@@ -32,6 +32,11 @@ export const CHARGERS = [
     'usb c',
     'usb micro',
 ]
+
+export const CABIN = [
+  'Speaker',
+  'Games'
+]
 export const INTERNATIONAL = [
     'Super burrito',
     'Sleeping pillow',
@@ -41,9 +46,11 @@ export const INTERNATIONAL = [
     'Passport',
     'International plug',
     'Noise canceling headphones',
+    'Mask / Mask strap helper',
+    'Traveling backpack',
 ]
 
-export const SNOwBOARDING = [
+export const SNOWBOARDING = [
     'Oatmeal lotion',
     'Knit cap',
     'Snow pants',

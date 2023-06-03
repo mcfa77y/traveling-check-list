@@ -10,6 +10,7 @@ import AccordionJL from './components/AccordionJL';
 import {
     BASE_TRAVEL,
     BBQ,
+    CABIN,
     CAMPING_CLOTHES,
     CAMPING_KITCHEN,
     CAMPING_MISC,
@@ -21,7 +22,7 @@ import {
     PRETRIP,
     PRETRIP_DOWNLOAD,
     ROAD_TRIP,
-    SNOwBOARDING,
+    SNOWBOARDING,
     SURFING,
 } from './list';
 import { styled } from '@mui/system';
@@ -53,7 +54,7 @@ function App() {
 
                     <AccordionJL
                         checkboxOptionList={[
-                            { label: '', optionList: SNOwBOARDING },
+                            { label: '', optionList: SNOWBOARDING },
                             { label: 'Cold place', optionList: COLD_PLACE },
                         ]}
                         summary="Snowboarding"
@@ -83,11 +84,18 @@ function App() {
                         summary="Road trip"
                     />
 
-                    <AccordionJL
+                     <AccordionJL
                         checkboxOptionList={[
                             { label: '', optionList: SURFING },
                         ]}
                         summary="Surfing"
+                    />
+          
+                    <AccordionJL
+                        checkboxOptionList={[
+                            { label: '', optionList: CABIN },
+                        ]}
+                        summary="Cabin"
                     />
                 </FormGroup>
                 <FormHelperText>Bon Voyage</FormHelperText>
