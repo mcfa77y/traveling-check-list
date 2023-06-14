@@ -18,7 +18,7 @@ export const BASE_TRAVEL = [
     'Ear plugs',
     'Eye mask',
 ];
-export const HOT_PLACE = ['bandanna', 'light button up shirts'];
+export const HOT_PLACE = ['bandanna', 'light button up shirts', 'straw hat'];
 export const COLD_PLACE = [
     'Scarf',
     'Beanie',
@@ -29,7 +29,7 @@ export const COLD_PLACE = [
 export const CHARGERS = [
     'Ipad',
     'Computer',
-    'usb c',
+    'long usb c',
     'usb micro',
 ]
 
@@ -44,8 +44,8 @@ export const INTERNATIONAL = [
     'Guide book',
     'Lufa',
     'Passport',
-    'International plug',
-    'Noise canceling headphones',
+    'International plug - sturdy one',
+    'Noise canceling headphones - in ear',
     'Mask / Mask strap helper',
     'Traveling backpack',
 ]
