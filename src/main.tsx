@@ -1,16 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { Provider } from 'react-redux';
 import App from './App';
+import './index.css';
+import { store } from './redux/store'; // Import your TypeScript slice
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
+console.log('hw')
+console.log(`[index] Provider: ${Provider}`);
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
-  </React.StrictMode>
+    </Provider>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
