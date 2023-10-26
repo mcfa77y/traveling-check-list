@@ -1,13 +1,13 @@
-import { ExpandMore } from '@mui/icons-material';
+import { ExpandMore } from "@mui/icons-material";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Grid,
   Typography,
-} from '@mui/material';
-import { styled } from '@mui/system';
-import CheckboxJL from './CheckboxJL';
+} from "@mui/material";
+import { styled } from "@mui/system";
+import CheckboxJL from "./CheckboxJL";
 
 interface IOptionContainer {
   label: string;
@@ -20,18 +20,18 @@ type Props = {
   onToggle: () => void;
 };
 
-function createCheckboxes(optionContainer: IOptionContainer) {
+function createCheckboxes(optionContainer: IOptionContainer, summary: string) {
   const checkboxes = optionContainer.optionList.sort().map((label, index) => {
-    const key = `${label}_${index}`;
-    console.log(`[checkbox] key: ${key}`);
+    const key = `${summary}_${label}_${index}`;
+    console.log(`[AccordionJL] ${key}`);
     return (
       <Grid
         item
         xs={2}
         sm={4}
         md={4}
-        key={`${label}_${index}_${new Date().getTime()}`}
-        style={{ display: 'flex', alignItems: 'center' }}
+        key={key}
+        style={{ display: "flex", alignItems: "center" }}
       >
         <CheckboxJL label={label} />
       </Grid>
@@ -39,7 +39,7 @@ function createCheckboxes(optionContainer: IOptionContainer) {
   });
   return (
     <SectionJL>
-      <Typography variant="h5">{optionContainer.label}</Typography>
+      <Typography variant="h3">{optionContainer.label}</Typography>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
@@ -57,7 +57,9 @@ export default function AccordionJL({
   expanded = false,
   onToggle,
 }: Props) {
-  const checkboxes = checkboxOptionList.map(createCheckboxes);
+  const checkboxes = checkboxOptionList.map((checkBoxOption) => {
+    return createCheckboxes(checkBoxOption, summary);
+  });
   return (
     <Accordion expanded={expanded} onChange={onToggle}>
       <AccordionSummary
@@ -65,19 +67,19 @@ export default function AccordionJL({
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography variant="h4">{summary}</Typography>
+        <Typography variant="h3">{summary}</Typography>
       </AccordionSummary>
       <AccordionDetails>{checkboxes}</AccordionDetails>
     </Accordion>
   );
 }
 
-const SectionJL = styled('div')({
+const SectionJL = styled("div")({
   // color: 'white',
   // backgroundColor: 'lightgrey',
   padding: 8,
-  borderStyle: 'solid',
-  borderColor: 'lightgray',
+  borderStyle: "solid",
+  borderColor: "lightgray",
   borderRadius: 12,
   marginBottom: 20,
 });

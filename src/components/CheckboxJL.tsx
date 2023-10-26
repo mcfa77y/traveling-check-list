@@ -1,5 +1,5 @@
-import { Checkbox, FormControlLabel } from '@mui/material';
-import { sentenceCase } from 'change-case';
+import { Checkbox, FormControlLabel, Typography } from "@mui/material";
+import { sentenceCase } from "change-case";
 
 type Props = {
   label: string;
@@ -11,11 +11,11 @@ function CheckboxJL({ label }: Props) {
       control={
         <Checkbox
           sx={{
-            '& .MuiSvgIcon-root': { fontSize: 38 },
+            "& .MuiSvgIcon-root": { fontSize: 38 },
           }}
         />
       }
-      label={sentenceCase(label)}
+      label={<Typography variant="h4">{sentenceCase(label)}</Typography>}
     />
   );
 }
