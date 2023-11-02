@@ -103,7 +103,7 @@ function App() {
     );
   }
   return (
-    <ContainerJL maxWidth="md">
+    <ContainerJL maxWidth="lg">
       <Button variant='contained' onClick={() => setShowAll(!showAll)}>hide unused</Button>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend">Travel Checklist</FormLabel>
